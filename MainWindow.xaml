@@ -20,7 +20,7 @@
                 </StackPanel>
 
                 <UniformGrid Margin="0,15,15,15" Grid.Row="1">
-                    <Button x:Name="SportManButton" Click="SportManButton_Click" Margin="15">
+                    <Button x:Name="SportManButton" Tag="Спортсмены" Uid="Фамилия" Click="SportManButton_Click" Margin="15">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -57,7 +57,7 @@
                         </Grid>
                     </Button>
 
-                    <Button x:Name="SportTypeButton" Click="SportTypeButton_Click" Margin="15">
+                    <Button x:Name="SportTypeButton" Tag="ВидыСпорта" Uid="Название" Click="SportManButton_Click" Margin="15">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -81,7 +81,7 @@
                         </Grid>
                     </Button>
 
-                    <Button x:Name="StadiumsButton" Click="StadiumsButton_Click" Margin="15">
+                    <Button x:Name="StadiumsButton" Tag="Стадионы" Uid="Название" Click="SportManButton_Click" Margin="15">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -105,7 +105,7 @@
                         </Grid>
                     </Button>
 
-                    <Button x:Name="CompetitionsButton" Click="CompetitionsButton_Click" Margin="15">
+                    <Button x:Name="CompetitionsButton" Tag="Журнал" Uid="Номер" Click="SportManButton_Click"  Margin="15">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>

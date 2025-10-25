@@ -1,23 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 namespace Sport
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -30,24 +15,6 @@ namespace Sport
             (SolidColorBrush)Application.Current.Resources["LightTheme"] :
             (SolidColorBrush)Application.Current.Resources["DarkTheme"];
 
-        private void SportManButton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(new DataPage("Спортсмены"));
-        }
-
-        private void SportTypeButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void StadiumsButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CompetitionsButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        private void SportManButton_Click(object sender, RoutedEventArgs e) => Frame.Navigate(new DataPage(((((Button)sender).Content as Grid).Children[0] as TextBlock).Text, ((Button)sender).Tag.ToString(), ((Button)sender).Uid, $"Select * From {((Button)sender).Tag.ToString()}_view"));
     }
 }

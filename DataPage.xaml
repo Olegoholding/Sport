@@ -27,20 +27,20 @@
                 <TextBlock x:Name="NameTextBlock"  Text="Название раздела" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Foreground="{DynamicResource Current}" FontWeight="Bold"/>
             </Border>
 
-            <TextBox Grid.Row="1" Margin="15" FontSize="20"/>
-            <Button Grid.Row="2" Height="50" Margin="15,0,15,15">
-                <TextBlock Text="Поиск" Foreground="{DynamicResource Current}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+            <TextBox Name="TexxtBox" Grid.Row="1" Margin="15" FontSize="20"/>
+            <Button Name="SrcBtn" Click="SrcBtn_Click" Grid.Row="2" Height="50" Margin="15,0,15,15">
+                <TextBlock Name="SrcBox"  Text="Поиск" Foreground="{DynamicResource Current}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
             </Button>
 
-            <Button VerticalAlignment="Bottom" Grid.Row="3" Height="50" Margin="15,0,15,15">
+            <Button Name="AddBtn" Click="AddBtn_Click" VerticalAlignment="Bottom" Grid.Row="3" Height="50" Margin="15,0,15,15">
                 <TextBlock Text="Добавить" Foreground="{DynamicResource Current}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
             </Button>
-            <Button Grid.Row="4" Height="50" Margin="15,0,15,15">
+            <Button Name="DltBtn" Click="DltBtn_Click" Grid.Row="4" Height="50" Margin="15,0,15,15">
                 <TextBlock Text="Удалить" Foreground="{DynamicResource Current}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
             </Button>
         </Grid>
 
-        <DataGrid Grid.Column="1"/>
+        <DataGrid Name="DataGrid" Grid.Column="1"/>
 
     </Grid>
 </Page>
